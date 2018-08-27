@@ -140,6 +140,7 @@ int main () {
 					printf("The sharing functions are not uniform");
 				}
 			}
+			//printf("%5d",z);
 		}
 	}
 	printf("The sharing functions are uniform");

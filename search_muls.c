@@ -129,7 +129,7 @@ int main () {
 		for (w2=0; w2<512; w2++) {
 			for (w3=0; w3<256; w3++) {
 				for (w4=0; w4<64; w4++) {
-				//we choose w1=244,w2=428,w3=116,w4=51, the generated Muls sharing can be verified that the gf2^4 multiplier in TI2 stage 4 satisfy the uniformity by check_uni_stage4.c
+				//we choose w1=244,w2=428,w3=116,w4=51, one of the most efficient Muls sharings which can be verified that the gf2^4 multiplier in TI2 stage 4 satisfy the uniformity by check_uni_stage4.c
 				
 					f1[0]=(w1 & 0x100) >> 8;
 					f1[1]=(w1 & 0x80) >> 7;
@@ -243,23 +243,23 @@ int main () {
 
 							//output f_4(x)
 							printf("f_4(x)=(");
-							printf("%1d",f3[0]);
+							printf("%1d",f4[0]);
 							printf("*x[0]+");
-							printf("%1d",f3[1]);
+							printf("%1d",f4[1]);
 							printf("*x[1]+");
-							printf("%1d",f3[2]);
+							printf("%1d",f4[2]);
 							printf("*x[2])*(");
-							printf("%1d",f3[3]);
+							printf("%1d",f4[3]);
 							printf("*y[0]+");
-							printf("%1d",f3[4]);
+							printf("%1d",f4[4]);
 							printf("*y[1]+");
-							printf("%1d",f3[5]);
+							printf("%1d",f4[5]);
 							printf("*y[2])+");
-							printf("%1d",f3[6]);
+							printf("%1d",f4[6]);
 							printf("*sqsc(x[0],y[0])+");
-							printf("%1d",f3[7]);
+							printf("%1d",f4[7]);
 							printf("*sqsc(x[1],y[1])+");
-							printf("%1d",f3[8]);
+							printf("%1d",f4[8]);
 							printf("*sqsc(x[2],y[2])");
 							printf ( "\n" );
 						}
